@@ -8,6 +8,9 @@
   <ion-list>
     <ion-item-sliding *ngFor="let item of items | async">
       <ion-item>
+        <ion-avatar item-start>
+          <img src="{{item.photo}}">
+        </ion-avatar>
         <h3>{{item.nama}}</h3>
         <p>{{item.kelas}}</p>
       </ion-item>

@@ -19,7 +19,7 @@ export class HomePage {
   }
 
   add(){
-     let prompt = this.alertCtrl.create({
+     /*let prompt = this.alertCtrl.create({
        title: 'New Siswa',
        subTitle: 'Masukkan data siswa',
        inputs: [
@@ -54,7 +54,10 @@ export class HomePage {
          }
        ]
      });
-     prompt.present();
+     prompt.present(); */
+    
+     this.navCtrl.push('InputSiswaPage');
+
   }
 
   edit(item){

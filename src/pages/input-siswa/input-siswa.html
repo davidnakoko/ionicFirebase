@@ -1,0 +1,38 @@
+<!--
+  Generated template for the InputSiswaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Input Siswa</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="profil">
+    <img src="{{photoPreview ? photoPreview :'assets/imgs/profil.jpg'}}" (click)="foto.click()">
+    <input type="file" class="sembunyi" #foto (change)="selectPhoto($event)" >  
+  </div>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Nomor Induk Siswa :</ion-label>
+      <ion-input type="text" [(ngModel)]="data.nis"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Nama Siswa :</ion-label>
+      <ion-input type="text" [(ngModel)]="data.nama"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Kelas :</ion-label>
+      <ion-input type="text" [(ngModel)]="data.kelas"></ion-input>
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <button ion-button block (click)="save()">SAVE</button>
+  </div>
+</ion-content>
